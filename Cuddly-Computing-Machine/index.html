@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./fileSaving.js" defer></script>
+    <script src="./visualization.js" defer></script>
+    <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="javascript:void(0)" id="link">Download</a>
+    </header>
+    <br>
+    <div id="message-container">
+
+    </div>
+    <hr>
+    <div>
+        Events
+        <button type="button" onclick="createSection('event')">+</button>
+    </div>
+    <div id="event-container">
+
+    </div>
+
+    <div style="display: none;">
+        <template id="event">
+            <div class="event">
+                <div>
+                    <label for="delete">Remove event</label>
+                    <input onclick="this.parentElement.parentElement.remove()" id="delete" type="button" style="display: none;" class="delete">
+                </div>
+                <hr>
+                <div>
+                    <label for="id">ID</label>
+                    <input id="id" type="text" class="id">
+                </div>
+                <hr>
+                <div>
+                    <label for="place">place</label>
+                    <input id="place" type="number" min="0" class="place">
+                </div>
+                <hr>
+                <div>
+                    <label for="text">text</label>
+                    <input id="text" type="text" class="text">
+                </div>
+                <hr>
+                <div>
+                    <label for="predicate">predicate</label>
+                    <input id="predicate" type="" class="text">
+                </div>
+                <hr>
+                <div>
+                    Outcome
+                    <select id="select"
+                        onchange="this.parentElement.querySelectorAll('div').forEach(e=>{e.style.display='none'});this.parentElement.querySelector('#'+this.value).style.display='initial'">
+                        <option value="empty">Please choose an option</option>
+                        <option value="location">Location transfer</option>
+                        <option value="string">Predifined outcome</option>
+                        <option value="custom">Custom event</option>
+                    </select>
+                    <hr>
+                    <div id="location" style="display: none;">
+                        <input id="outcome-location" type="number" min="0">
+                    </div>
+                    <div id="string" style="display: none;">
+                        <select id="select">
+                            <option value="">Please choose an option</option>
+                            <option value="shop">Start a shop event</option>
+                        </select>
+                    </div>
+                    <div id="custom" style="display: none;">
+                        <input id="outcome-custom" type="" class="text">
+                    </div>
+                </div>
+                <hr>
+                <script>
+                    events = document.currentScript.parentElement.parentElement.children.length - 1;
+                    document.currentScript.parentElement.id = events;
+                    document.currentScript.parentElement.querySelectorAll('input').forEach(e => {
+                        e.id += '-' + events
+                    })
+                    document.currentScript.parentElement.querySelectorAll('label').forEach(e => {
+                        e.htmlFor += '-' + events
+                    })
+                    events += 1
+                    document.currentScript.remove()
+                    console.log('event successfully created')
+                </script>
+            </div>
+        </template>
+    </div>
+</body>
+
+</html>

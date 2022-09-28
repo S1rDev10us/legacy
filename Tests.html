@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en">
+
+<head>
+    
+    
+    <title >Test zone</title>
+    <link rel="shortcut icon" type="image/gif" href="./images/ROFL_Waffle.gif" />
+
+    <!--Style (colours)-->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/scroll.css" />
+    <link rel="stylesheet" href="./styles/switch.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <script src="./scripts/header.js"></script>
+    <script src="./scripts/internet.js"></script>
+
+</head>
+
+
+<body>
+
+    <!--Scripts-->
+    <div>
+        <!--Variables, imports and constants-->
+        <div>
+
+            <script>
+                var button = false;
+
+
+                var Toggle1 = 'off';
+                var Toggle2 = 'off';
+            </script>
+        </div>
+        <!--Other Scripts-->
+        <div>
+            <script src="scripts/file.js"></script>
+            
+        </div>
+
+    </div>
+    <!--View-->
+    <div>
+        <br />
+        <!--Refresh-->
+        <button class="headerbutton button" type=button onclick="history.go(0)" style="top:0">
+            Refresh
+        </button>
+        <!--Header-->
+
+        <header>
+            <button class="navbar" id="navbar" style="top:0" onclick="window.location.replace('./');">
+
+                <div>
+                    <h1 {font-size: 40px}>
+
+                        <!--Page Title-->
+                        Test Z
+
+                        <img height="30" width="30" alt="ROFL Waffle" src="images/ROFL_Waffle.gif">
+
+
+                        ne
+
+
+
+
+                        <!---->
+                    </h1>
+
+
+
+                </div>
+            </button>
+
+        </header>
+
+
+
+        <div id="top">
+            <hr />
+            Test Area
+            <hr />
+        </div>
+        <!--AudioVis-->
+        <canvas id='canvas' style="width:100px; height:100%"></canvas>
+        <br>
+        <br>
+        <audio src="https://s1rdev10us.github.io/audio/sample.mp3" style="position:page" crossorigin="anonymous" id="audio" controls>
+            audio element not supported
+        </audio>
+        <script src="https://s1rdev10us.github.io/scripts/audioVis/main.js"></script>
+        <!--AudioVisCir-->
+        <br />
+
+        <button id="chart-container" onclick="wave.play()" style="border:hidden; width:500px; height:500px;">
+            <!--div id="chart-container" style="width: 100%; height: 100%;"></div-->
+
+        </button>
+        <script src="https://s1rdev10us.github.io/scripts/audioVisCir/dist/circular-audio-wave.min.js"></script>
+        <script>
+            let wave = new CircularAudioWave(document.getElementById('chart-container'));
+            wave.loadAudio('https://s1rdev10us.github.io/audio/sample.mp3');
+        </script>
+
+
+        <div>
+            <div><abbr title="Expanded"><a href="file:///C:/Users/S1rDe/OneDrive/Desktop/website/website.html">Not Expanded</a></abbr></div>
+            <div></div>
+            <div style=" text-transform: none; display: inline-block; height: 200px; overflow: auto; background-color: none; border: 1px solid; padding: 2px; cursor:auto;">
+                Scroll menu test
+                <br />
+                Discord Widget
+
+                <div>
+                    <iframe src="https://discord.com/widget?id=784546336274907186&theme=dark" width="350" height="500" allowtransparency="true" title="Discord Server Widget" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+                    </iframe>
+                </div>
+
+
+            </div>
+            <div><span draggable="true" style="cursor:move">Drag Me</span></div>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Whatever You Do Don't Click Me</a>
+            <div><strong>Strong?</strong></div>
+
+
+            <div><input placeholder="Enter some text here" /></div>
+            <select title="select test">
+                <option selected="selected"><--Select--></option>
+                <option>Selection One</option>
+                <option>Selection Two</option>
+            </select>
+
+            <br />
+            <button onclick="document.getElementById('bottom').scrollIntoView();window.setTimeout(function () {  document.getElementById('top').scrollIntoView(); }, 2000);">Bottom</button>
+
+
+        </div>
+        <br />
+        <form>
+            <input id="Checkbox1" type="checkbox" placeholder="checkbox" name="checks_and_bounces" title="" />
+            <label for="Checkbox1">check 1</label>
+            <input type="checkbox" placeholder="checkbox" id="check2" name="checks_and_bounces" />
+            <label for="check2">checks_and_bounces</label>
+        </form>
+        <input type="number" />
+        <br />
+        <input type="submit" />
+        <br />
+        <input type="date" />
+        <br />
+        <input type="url" placeholder="Url" />
+        <br />
+        <input type="search" placeholder="Search" />
+        <br />
+        <input type="color" />
+        <br />
+        <input type="file" />
+        <br />
+
+        <!-- Rounded switch -->
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <br />
+        <!-- Rounded switch -->
+        <label class="smallswitch">
+            <input type="checkbox">
+            <span class="smallslider round"></span>
+        </label>
+        <br />
+        <form>
+            <input id="Radio1" type="radio" name="name" />
+            <label for="Radio1">Label</label>
+            <input id="Radio2" type="radio" name="name" />
+        </form>
+
+        <br />
+        <textarea id="TextArea1" rows="2" cols="20" placeholder="TextArea">TextArea</textarea>
+        <br />
+        <style>
+            @keyframes move {
+                from {
+                    left: 0px;
+                    top: 0%;
+                }
+
+                50% {
+                    left: 100%;
+                    top: 0%;
+                }
+
+                to {
+                    left: 0px;
+                    top: 0%;
+                }
+            }
+
+            @keyframes rainbow {
+                from {
+                    background-color: #FF0000
+                }
+
+                33% {
+                    background-color: #00FF00
+                }
+
+                66% {
+                    background-color: #0000FF
+                }
+
+                to {
+                    background-color: #FF0000
+                }
+            }
+
+            .move.circle {
+                
+                animation: move var(--time) linear infinite;
+                position: relative;
+                width: 10px;
+                height: 10px;
+                border: 3px solid transparent;
+                border-radius: 10px;
+                background-clip: padding-box;
+            }
+
+            .rainbow {
+                animation: rainbow 5s linear infinite;
+                width: 100%;
+                height: 100%;
+                border: 3px solid transparent;
+                border-radius: 10px;
+                background-clip: padding-box;
+            }
+        </style>
+        <div class="slidecontainer">
+            <input style="height:10px;" step="0.05" type="range" min="0.1" max="5" value="10" class="" id="myRange">
+        </div>
+        <div id="circle-move" class="circle move">
+            <div class="rainbow"></div>
+        </div>
+        <div style="background-color:deepskyblue" id="circle-move" class="circle move">
+            
+        </div>
+        <script>
+
+            var slider = document.getElementById("myRange");
+            var output = document.querySelector('.move.circle');
+            output = document.querySelector(':root');
+            var r = document.getElementById('circle-move');
+            //setInterval(function () { var rs = getComputedStyle(r); console.log(rs.getPropertyValue('--time')); }, 1000)
+            //console.log(slider)
+            // Update the current slider value (each time you drag the slider handle)
+            slider.addEventListener('change', function () {
+                //console.log()
+                var value = (5 - this.value) + 's'
+                output.style.setProperty('--time', value);
+            })
+        </script>
+
+        <br />
+        <div>
+            <hr />
+            Test area ends
+            <hr />
+        </div>
+        <div>
+
+            <br />
+            <br /> <br />
+            <br /> <br />
+            <br /> <br />
+            <br /> <br />
+            <!--Buttons-->
+            <div>
+                
+                <!--Button1-->
+                <button class="button" type="button" onclick="document.body.classList.toggle('light-mode')">
+
+
+                    <div id="post_1" class="post_content">
+                        Button 1
+
+                    </div>
+
+                </button>
+                <!--Button 2-->
+                <button class="button" type="button" onclick="alert('Button 2'); button = false;  ">
+
+                    Button 2
+                    <div id="p1">unedited</div>
+                </button>
+                <!--Js-->
+
+
+            </div>
+            <!--console log variable-->
+            <button class="button" type=button
+                    onclick="//alert('Alert');
+    console.log(button); ">
+                Alert
+            </button>
+            <!--toggle button-->
+            <div>
+
+                <button class="button" type=button name="name"
+                        onclick="if (Toggle1 == 'On') { Toggle1 = 'Off' } else {Toggle1 = 'On'}
+    document.getElementById('Toggle1').innerHTML = Toggle1;">
+                    Toggle
+                    <div id="Toggle1">Off</div>
+                </button>
+                <button class="button" type=button name="name2"
+                        onclick="if (Toggle2 == 'On') { Toggle2 = 'Off' } else {Toggle2 = 'On'}
+    document.getElementById('Toggle2').innerHTML = Toggle2;">
+                    Toggle
+                    <div id="Toggle2">Off</div>
+                </button>
+
+            </div>
+        </div>
+        <br /> <br />
+        <br /> <br />
+        <br /> <br />
+        <br /> <br />
+        <br /> <br />
+        <br /> <br />
+        <br /> <br />
+        <br /> <br />
+        <br /> <br />
+        <br /> <br />
+        <br /> <br />
+        <br /> <br />
+        <br /> <br />
+        <br />
+    </div>
+
+
+
+
+    <footer id="bottom">
+        This is a footer
+    </footer>
+<!-- <script src="./scripts/rick-focus.js"></script> -->
+</body>
+
+</html>

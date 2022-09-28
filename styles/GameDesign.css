@@ -1,0 +1,11 @@
+html {
+    --textColor:aqua;
+    --backgroundColor:#333;
+}
+body {
+    background-color: var(--backgroundColor);
+    color:var(--textColor);
+}
+header {
+    position: sticky;
+}

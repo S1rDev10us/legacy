@@ -1,0 +1,31 @@
+html,body{
+    background-color: #222;
+    color: aqua;
+    font-family: 'Calibri';
+}
+a{
+    color: rgb(0, 200, 200);
+    background-color: #353535;
+    border-radius: 10px;
+    --padding:10px;
+    padding: var(--padding) var(--padding) var(--padding) var(--padding);
+    height: calc(var(--padding)*2);
+    width: 50%;
+}
+.event{
+    background-color: #353535;
+    width: 50%;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+input{
+    background-color: #303030;
+    color:white;
+    border-color: #111;
+    width: 30%;
+    border-radius: 10px;
+}
+.delete{
+    background-color: red;
+}
